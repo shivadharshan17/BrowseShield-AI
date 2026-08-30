@@ -1,0 +1,440 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+  width: 390px;
+
+  min-height: 0;
+  max-height: 650px;
+
+  background: #07111f;
+
+  color: white;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+  padding: 22px 20px 26px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  display: flex;
+  align-items: flex-start;
+
+  position: relative;
+
+  margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   SHIELD LOGO
+========================================================= */
+
+.logo {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 13px;
+
+  background: #2f6fed;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  margin-right: 12px;
+}
+
+.shield-icon {
+  width: 31px;
+  height: 31px;
+
+  display: block;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.title-area {
+  min-width: 0;
+}
+
+.title-area h1 {
+  margin: 0;
+
+  font-size: 22px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.title-area p {
+  margin: 6px 0 0;
+
+  color: #8db6f3;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PROTECTED BADGE
+========================================================= */
+
+.protected {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  background: #063d31;
+
+  border: 1px solid #0a785c;
+
+  color: #36f2a7;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+}
+
+
+/* =========================================================
+   PRIVACY CARD
+========================================================= */
+
+.privacy-card {
+  min-height: 100px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+
+  padding: 16px 17px;
+
+  border: 1px solid #1e4772;
+
+  border-radius: 14px;
+
+  background: #102038;
+
+  margin-bottom: 18px;
+}
+
+.lock {
+  font-size: 20px;
+
+  margin-top: 4px;
+
+  flex-shrink: 0;
+}
+
+.privacy-card h2 {
+  margin: 0 0 7px;
+
+  font-size: 16px;
+}
+
+.privacy-card p {
+  margin: 0;
+
+  color: #93b3df;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+button {
+  width: 100%;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  font-family: inherit;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    opacity 0.15s ease;
+}
+
+
+/* =========================================================
+   SCAN BUTTON
+========================================================= */
+
+.scan-button {
+  height: 52px;
+
+  background: #356fe8;
+
+  color: white;
+
+  margin-bottom: 13px;
+}
+
+.scan-button:hover:not(:disabled) {
+  background: #2f64d5;
+}
+
+.scan-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   SCAN STATUS
+========================================================= */
+
+.scan-status {
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 14px;
+
+  background: #0d1829;
+
+  border: 1px solid #23354f;
+
+  border-radius: 12px;
+
+  font-size: 13px;
+
+  margin-bottom: 17px;
+}
+
+
+/* =========================================================
+   TASK
+========================================================= */
+
+.task-area {
+  margin-bottom: 17px;
+}
+
+.task-area label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+textarea {
+  width: 100%;
+
+  height: 94px;
+
+  resize: none;
+
+  border-radius: 11px;
+
+  border: 1px solid #375174;
+
+  background: #020917;
+
+  color: white;
+
+  padding: 12px 13px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  outline: none;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+textarea::placeholder {
+  color: #7594cb;
+}
+
+textarea:focus {
+  border-color: #4d78bd;
+}
+
+
+/* =========================================================
+   RUN BUTTON
+========================================================= */
+
+.run-button {
+  height: 53px;
+
+  background: #169548;
+
+  color: white;
+}
+
+.run-button:hover:not(:disabled) {
+  background: #12813d;
+}
+
+
+/* Disabled until Scan Page completes */
+
+.run-button:disabled {
+  background: #163f2b;
+
+  color: #789988;
+
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   RESULT BOX
+========================================================= */
+
+.result-box {
+  margin-top: 17px;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  border: 1px solid #23354f;
+
+  background: #0d1829;
+}
+
+.result-status {
+  color: #34e998;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+.result-text {
+  color: #d8e5f7;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+
+  white-space: pre-wrap;
+
+  word-break: break-word;
+
+  max-height: 150px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+/* =========================================================
+   HIDDEN
+========================================================= */
+
+.hidden {
+  display: none !important;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+
+   Scrollbar appears only when content exceeds available area.
+========================================================= */
+
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar,
+.result-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track,
+.result-text::-webkit-scrollbar-track {
+  background: #07111f;
+}
+
+body::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb,
+.result-text::-webkit-scrollbar-thumb {
+  background: #2a3f5f;
+
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+textarea::-webkit-scrollbar-thumb:hover,
+.result-text::-webkit-scrollbar-thumb:hover {
+  background: #38577f;
+}

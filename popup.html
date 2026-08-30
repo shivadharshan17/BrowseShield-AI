@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>BrowseShield AI</title>
+
+  <link
+    rel="stylesheet"
+    href="popup.css"
+  />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- ===================================================
+         HEADER
+    ==================================================== -->
+
+    <div class="header">
+
+      <div class="logo">
+
+        <svg
+          class="shield-icon"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
+          <path
+            d="M12 3L19 6V11C19 15.6 16.2 19.2 12 21C7.8 19.2 5 15.6 5 11V6L12 3Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linejoin="round"
+          />
+
+          <path
+            d="M9 12L11 14L15 10"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+
+        </svg>
+
+      </div>
+
+
+      <div class="title-area">
+
+        <h1>
+          BrowseShield AI
+        </h1>
+
+        <p>
+          Privacy-First Browser AI Agent
+        </p>
+
+      </div>
+
+
+      <div class="protected">
+        Protected
+      </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         PRIVACY CARD
+    ==================================================== -->
+
+    <div class="privacy-card">
+
+      <div class="lock">
+        🔒
+      </div>
+
+      <div>
+
+        <h2>
+          Privacy before AI
+        </h2>
+
+        <p>
+          BrowseShield AI protects sensitive webpage data
+          locally before AI sees the task context.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         SCAN
+    ==================================================== -->
+
+    <button
+      id="scanButton"
+      class="scan-button"
+    >
+      Scan Page
+    </button>
+
+
+    <div
+      id="scanStatus"
+      class="scan-status hidden"
+    >
+      ✓ Page scanned.
+    </div>
+
+
+    <!-- ===================================================
+         TASK
+    ==================================================== -->
+
+    <div class="task-area">
+
+      <label for="taskInput">
+        What should BrowseShield AI do?
+      </label>
+
+      <textarea
+        id="taskInput"
+      ></textarea>
+
+    </div>
+
+
+    <!-- ===================================================
+         RUN
+    ==================================================== -->
+
+    <button
+      id="runButton"
+      class="run-button"
+      disabled
+    >
+      Run BrowseShield AI
+    </button>
+
+
+    <!-- ===================================================
+         RESULT
+    ==================================================== -->
+
+    <div
+      id="resultBox"
+      class="result-box hidden"
+    >
+
+      <div
+        id="resultStatus"
+        class="result-status"
+      ></div>
+
+      <div
+        id="resultText"
+        class="result-text"
+      ></div>
+
+    </div>
+
+  </div>
+
+
+  <script src="popup.js"></script>
+
+</body>
+
+</html>
